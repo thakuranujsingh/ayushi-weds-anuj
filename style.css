@@ -17834,7 +17834,14 @@ footer {
     color: #640204;
     border-radius: 50%;
 }
-
+.ayushi-img {
+    max-width: 430px !important;
+    height: auto;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    padding: 10px;
+    background: #e0e0f0;
+}
   @media only screen and (max-width: 767px){
     span#playBtn {
         display: none;

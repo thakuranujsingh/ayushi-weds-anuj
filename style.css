@@ -17820,8 +17820,25 @@ footer {
     src:  url("fonts/marsha/marsha_belle_demo_version-webfont.woff")
     format("woff"),
   }
+  span#playBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    z-index: 1;
+    backdrop-filter: blur(9px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #640204;
+    border-radius: 50%;
+}
 
   @media only screen and (max-width: 767px){
+    span#playBtn {
+        display: none;
+    }
     .gla_flower2_name_l, .gla_flower2_name_r {
         position: relative;
         margin: 0;
@@ -17839,3 +17856,4 @@ footer {
         top: 202px !important;
     }
   }
+ 

@@ -13,12 +13,12 @@
     <!-- Library CSS -->
     <link href="style.css" rel="stylesheet" />
     <!-- MS Tile - for Microsoft apps-->
-<meta name="msapplication-TileImage" content="https://ayushi-weds-anuj.com/images/save-the-date.png">    
+    <meta name="msapplication-TileImage" content="https://ayushi-weds-anuj.com/images/save-the-date.png">
 
-<!-- fb & Whatsapp -->
+    <!-- fb & Whatsapp -->
 
-<!-- Site Name, Title, and Description to be displayed -->
-<meta property="og:site_name" content="Ayushi Weds Anuj">
+    <!-- Site Name, Title, and Description to be displayed -->
+    <meta property="og:site_name" content="Ayushi Weds Anuj">
 
     <meta property="og:title" content="Ayushi Weds Anuj" />
     <meta property="og:url" content="http://ayushi-weds-anuj.com/" />
@@ -29,7 +29,7 @@
     Sainik Rest House
     Dharamshala, Kangra (H.P.)
     Reception of Baraat 7:30 PM" />
-    
+
     <meta property="og:image" content="https://ayushi-weds-anuj.com/images/save-the-date.png" />
     <meta property="og:type" content="website" />
     <meta property="og:image:type" content="image/png">
@@ -63,8 +63,8 @@
 
         <div class="gla_music_icon_cont">
 
-            <iframe id="sc-widget" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/74925530&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+            <!-- <iframe id="sc-widget"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/74925530"></iframe> -->
         </div>
         <!-- Slider -->
         <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed" data-image="images/bg1.webp"
@@ -447,7 +447,7 @@
 
                             </div>
                         </div>
-                        
+
                         <div class="col-sm-4 gla_anim_box grid-item ceremony">
                             <div class="gla_shop_item">
                                 <a href="images/myPic/riya.jpeg" class="lightbox">
@@ -511,48 +511,35 @@
     <!-- JQuery -->
     <script src="js/jquery-1.12.4.min.js"></script>
 
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+        integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
 
-    <script src="js/glanz_library.js"></script>
+            Howler.usingWebAudio = true;
+            Howler.autoUnlock = true;
 
-    <!-- Theme JS -->
-    <script src="js/glanz_script.js"></script>
-    <script type="text/javascript">
-        (function () {
-            var widgetIframe = document.getElementById('sc-widget'),
-                widget = SC.Widget(widgetIframe);
-
-            widget.bind(SC.Widget.Events.READY, function () {
-
-                widget.bind(SC.Widget.Events.FINISH, function () {
-                    // get information about currently playing sound
-                    // widget.getCurrentSound(function (currentSound) {
-                    //     console.log('sound ' + currentSound.get('') + 'began to play');
-                    // });
-                    widget.play()
-                });
-                widget.play()
-                // get current level of volume
-                widget.getVolume(function (volume) {
-
-                });
-
-                jQuery("#playBtn").trigger("click");
-                // set new volume level
-                widget.setVolume(50);
-                // get the value of the current position
+            var sound = new Howl({
+                src: ['song.mp3'],
+                loop: true,
+                volume: 0.5,
+                autoplay: true,
             });
-            jQuery('#playBtn').on('click', function () {
-                widget.play();
+            sound.once("unlock", (e) => {
+                sound.play()
             })
-
-        }());
-
-        //  jQuery('#video_background').prop('muted', false);
-        //  jQuery('#video_background').trigger('play');
+           
+        })
 
     </script>
-
+    <script src="js/stellar.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/glanz_library.js"></script>
+    <script src="js/glanz_script.js"></script>
 
 </body>
 
